@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - d2
     paths:
       - "src/**"
       - "package.json"
