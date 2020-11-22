@@ -1,4 +1,4 @@
-# INIT
+# Compare a npm package version with your package.json
 
 This is a good example for using this package ; )
 
