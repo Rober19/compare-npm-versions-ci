@@ -40,7 +40,7 @@ export async function compareTheseVersions(
   const npm_is_greater: boolean = compareVersions.compare(
     pkg_npm_version,
     current_local_version,
-    '>'
+    '>='
   )
 
   return {
