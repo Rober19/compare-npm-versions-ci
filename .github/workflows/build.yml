@@ -4,10 +4,10 @@ on:
     branches:
       - master
       - d2
-    paths:
-      - "src/**"
-      - "package.json"
-      - ".github/workflows/build.yml"
+    # paths:
+    #   - "src/**"
+    #   - "package.json"
+    #   - ".github/workflows/build.yml"
 
 jobs:
   build:
