@@ -14,7 +14,7 @@ describe('getNodeVersion', () => {
     test('find package.json', () => {
       const result = findPackageJson(fixturePath)
 
-      expect(result).toBe(fs.readFileSync(fixture).toString())
+      expect(result).toBe(JSON.stringify(require('./fixture/package.json')))
     })
   })
 
@@ -30,7 +30,7 @@ describe('getNodeVersion', () => {
     test('check findPackageJson, getNodeVersion & latestVersion', async () => {
       const current_local_version: string = getNodeVersion(fixturePath)
 
-      const SAMPLE = JSON.parse(fs.readFileSync(fixture).toString())
+      const SAMPLE = require('./fixture/package.json')
 
       const { npm_is_greater } = await compareTheseVersions(
         SAMPLE.name,

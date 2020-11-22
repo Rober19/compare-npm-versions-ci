@@ -3,7 +3,7 @@ import { getNodeVersion, compareTheseVersions } from './getNodeVersion'
 
 async function run(): Promise<void> {
   try {
-    const path = core.getInput('path')
+    const path : any = core.getInput('path') || process.env.GITHUB_WORKSPACE;
     const npm_package_name = core.getInput('npm_package_name')
 
     core.debug(`Load package.json at ${path}`)

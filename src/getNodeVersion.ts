@@ -1,15 +1,23 @@
 import fs from 'fs'
-import { join } from 'path'
+import { join, resolve } from 'path'
 
 import compareVersions from 'compare-versions'
 import latestVersion from 'latest-version'
 
 /**
  * Find package.json with path.
+ * 
  * @param path
  */
 export function findPackageJson(path: string): string {
-  return fs.readFileSync(join(path, 'package.json')).toString()
+
+  let dir = path;
+  dir = resolve(dir);
+
+  const packagePath = join(dir, "package.json");
+  const pkg = require(packagePath);
+
+  return JSON.stringify(pkg);
 }
 
 /**
