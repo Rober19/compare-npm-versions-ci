@@ -8,11 +8,7 @@
     "watch": "ncc build src/main.ts --watch --out lib",
     "lint": "eslint ./src --ext ts && echo 'Lint complete.'",
     "lintfix": "eslint ./src --ext ts --fix && echo \"Lint & fix complete.\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EndBug/version-check.git"
+    "test": "jest"
   },
   "keywords": [
     "github",
@@ -21,25 +17,34 @@
     "npm",
     "node"
   ],
-  "author": "Federico Grandi <fgrandi30@gmail.com>",
+  "author": "-",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/EndBug/version-check/issues"
-  },
-  "homepage": "https://github.com/EndBug/version-check#readme",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "axios": "^0.19.2",
-    "semver-diff": "^3.1.1",
-    "semver-regex": "^3.1.1"
+    "compare-versions": "^3.6.0",
+    "get-npm-package-version": "^1.0.6",
+    "latest-version": "^5.1.0"
   },
   "devDependencies": {
-    "@types/node": "^12.12.30",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.19.6",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
     "@zeit/ncc": "^0.21.1",
     "all-contributors-cli": "^6.16.1",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-github": "^4.1.1",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "jest-circus": "^26.4.2",
+    "js-yaml": "^3.14.0",
+    "lint-staged": "^9.4.3",
+    "prettier": "2.1.1",
+    "ts-jest": "^24.3.0",
     "typescript": "^3.8.3"
   }
 }
