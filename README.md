@@ -60,3 +60,13 @@ jobs:
       # ----------------------------------------------------
 
 ```
+
+
+Console output example
+
+```
+
+echo "Version is 1.0.12"    
+echo "Version NPM is 1.0.11" 
+
+```
