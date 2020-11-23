@@ -18,7 +18,7 @@ async function run(): Promise<void> {
     core.info(`set output: npm version: ${pkg_npm_version}`)
     core.setOutput('pkg_npm_version', `${pkg_npm_version}`)
 
-    core.info(`set output: Is npm version greater than local?: ${npm_is_greater}`)
+    core.info(`set output: Is npm version ${pkg_npm_version} >= ${local_version} than local?: ${npm_is_greater}`)
     core.setOutput('npm_is_greater', `${npm_is_greater}`)
 
 
