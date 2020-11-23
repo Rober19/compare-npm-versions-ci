@@ -5,6 +5,7 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "npm i && ncc build src/main.ts --minify --out lib",
+    "build:ci": "ncc build src/main.ts --minify --out lib && git add lib",
     "watch": "ncc build src/main.ts --watch --out lib",
     "lint": "eslint ./src --ext ts && echo 'Lint complete.'",
     "lintfix": "eslint ./src --ext ts --fix && echo \"Lint & fix complete.\"",
@@ -18,7 +19,7 @@
     "node"
   ],
   "pre-commit": [
-    "build"
+    "build:ci"
   ],
   "author": "-",
   "license": "MIT",
